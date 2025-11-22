@@ -1,13 +1,4 @@
-{
-  "itemGroup.fisch": "Example Mod Tab",
-  "block.fisch.example_block": "Example Block",
-  "item.fisch.example_item": "Example Item",
+{  "key.categories.fisch.fisch": "Fisch's Keybinds",
+"key.fisch.open": "Open GUI"
 
-  "fisch.configuration.title": "FischNeoForge Configs",
-  "fisch.configuration.section.fisch.common.toml": "FischNeoForge Configs",
-  "fisch.configuration.section.fisch.common.toml.title": "FischNeoForge Configs",
-  "fisch.configuration.items": "Item List",
-  "fisch.configuration.logDirtBlock": "Log Dirt Block",
-  "fisch.configuration.magicNumberIntroduction": "Magic Number Text",
-  "fisch.configuration.magicNumber": "Magic Number"
 }

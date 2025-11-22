@@ -1,5 +1,6 @@
 package net.kuko.fisch;
 
+import net.kuko.fisch.client.FischKeyMappings;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -7,6 +8,8 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
@@ -15,6 +18,19 @@ import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 public class FischModClient {
     public FischModClient(ModContainer container) {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
+    }
+
+    @SubscribeEvent // on the mod event bus only on the physical client
+    public static void registerBindings(RegisterKeyMappingsEvent event) {
+        event.register(FischKeyMappings.open);
+    }
+
+    @SubscribeEvent // on the game event bus only on the physical client
+    public static void onClientTick(ClientTickEvent.Post event) {
+        while (FischKeyMappings.open.consumeClick()) {
+            // Execute logic to perform on click here
+            FischMod.LOGGER.info("Clicked");
+        }
     }
 
     @SubscribeEvent
