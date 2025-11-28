@@ -1,12 +1,13 @@
 package net.kuko.fisch;
 
+import foundry.veil.forge.event.ForgeFreeNativeResourcesEvent;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
@@ -18,7 +19,6 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredHolder;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(FischMod.MOD_ID)
@@ -65,6 +65,7 @@ public class FischMod {
            // event.accept(EXAMPLE_BLOCK_ITEM);
         }
     }
+
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
