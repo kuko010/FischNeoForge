@@ -1,4 +1,4 @@
-package net.kuko.fisch;
+package net.kuko.fisch.other;
 
 
 

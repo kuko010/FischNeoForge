@@ -1,8 +1,5 @@
 package net.kuko.fisch;
 
-import foundry.veil.forge.event.ForgeFreeNativeResourcesEvent;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -21,15 +18,15 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(FischMod.MOD_ID)
-public class FischMod {
+@Mod(Fisch.MOD_ID)
+public class Fisch {
     public static final String MOD_ID = "fisch";
     public static final Logger LOGGER = LogUtils.getLogger();
 
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public FischMod(IEventBus modEventBus, ModContainer modContainer) {
+    public Fisch(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 

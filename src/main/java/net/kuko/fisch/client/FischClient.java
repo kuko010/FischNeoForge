@@ -1,6 +1,6 @@
-package net.kuko.fisch;
+package net.kuko.fisch.client;
 
-import net.kuko.fisch.client.FischKeyMappings;
+import net.kuko.fisch.Fisch;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -13,10 +13,10 @@ import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
-@Mod(value = FischMod.MOD_ID, dist = Dist.CLIENT)
-@EventBusSubscriber(modid = FischMod.MOD_ID, value = Dist.CLIENT)
-public class FischModClient {
-    public FischModClient(ModContainer container) {
+@Mod(value = Fisch.MOD_ID, dist = Dist.CLIENT)
+@EventBusSubscriber(modid = Fisch.MOD_ID, value = Dist.CLIENT)
+public class FischClient {
+    public FischClient(ModContainer container) {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 
@@ -29,14 +29,14 @@ public class FischModClient {
     public static void onClientTick(ClientTickEvent.Post event) {
         while (FischKeyMappings.open.consumeClick()) {
             // Execute logic to perform on click here
-            FischMod.LOGGER.info("Clicked");
+            Fisch.LOGGER.info("Clicked");
         }
     }
 
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
         // Some client setup code
-        FischMod.LOGGER.info("HELLO FROM CLIENT SETUP");
-        FischMod.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        Fisch.LOGGER.info("HELLO FROM CLIENT SETUP");
+        Fisch.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
     }
 }
