@@ -1,6 +1,6 @@
-package net.kuko.fisch.client;
+package net.kuko.fisch;
 
-import net.kuko.fisch.Fisch;
+import net.kuko.fisch.client.FischKeyMappings;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
