@@ -23,3 +23,6 @@ Additional Resources:
 ==========
 Community Documentation: https://docs.neoforged.net/  
 NeoForged Discord: https://discord.neoforged.net/
+
+
+<img width="1034" height="418" alt="image" src="https://github.com/user-attachments/assets/f300f5ae-8478-4f9d-a1f9-7122cc77dfbb" />
