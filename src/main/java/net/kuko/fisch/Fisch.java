@@ -1,5 +1,6 @@
 package net.kuko.fisch;
 
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -23,18 +24,18 @@ public class Fisch {
     public static final String MOD_ID = "fisch";
     public static final Logger LOGGER = LogUtils.getLogger();
 
+    public static ResourceLocation rl(String s) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, s);
+    }
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Fisch(IEventBus modEventBus, ModContainer modContainer) {
-        // Register the commonSetup method for mod loading
         modEventBus.addListener(this::commonSetup);
-
-
-        // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (FischNeoForge) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModItems.register(modEventBus);
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -60,6 +61,9 @@ public class Fisch {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
            // event.accept(EXAMPLE_BLOCK_ITEM);
+        }
+        if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+//            event.accept(ModItems.CROOKED_SWORD.get());
         }
     }
 
