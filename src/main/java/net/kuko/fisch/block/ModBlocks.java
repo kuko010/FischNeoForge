@@ -1,5 +1,7 @@
-package net.kuko.fisch;
+package net.kuko.fisch.block;
 
+import net.kuko.fisch.Fisch;
+import net.kuko.fisch.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

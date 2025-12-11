@@ -1,5 +1,6 @@
 package net.kuko.fisch;
 
+import net.kuko.fisch.item.ModItems;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 

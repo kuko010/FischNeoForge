@@ -1,5 +1,6 @@
-package net.kuko.fisch;
+package net.kuko.fisch.item;
 
+import net.kuko.fisch.Fisch;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
