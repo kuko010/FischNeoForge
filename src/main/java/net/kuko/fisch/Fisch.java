@@ -1,6 +1,6 @@
 package net.kuko.fisch;
 
-import net.kuko.fisch.event.FischEvents;
+import net.kuko.fisch.block.ModBlocks;
 import net.kuko.fisch.item.ModItems;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
@@ -28,6 +28,7 @@ public class Fisch {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         /*
          Generator for Enchanting language:
              Generator for Lorem Ipsum: https://www.lipsum.com/

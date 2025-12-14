@@ -1,6 +1,5 @@
 package net.kuko.fisch;
 
-import net.kuko.fisch.client.KeybindHandler;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -21,8 +20,7 @@ public class FischClient {
 
     @SubscribeEvent // on the game event bus only on the physical client
     public static void onClientTick(ClientTickEvent.Post event) {
-        KeybindHandler.KeyBindingCode(event);
-
+//        KeybindHandler.KeyBindingCode(event);
     }
 
     @SubscribeEvent
