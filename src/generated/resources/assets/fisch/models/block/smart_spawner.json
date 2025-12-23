@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "fisch:block/smart_spawner"
+  },
+  "render_type": "cutout"
+}
