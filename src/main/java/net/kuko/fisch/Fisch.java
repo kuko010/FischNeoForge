@@ -2,7 +2,9 @@ package net.kuko.fisch;
 
 //import net.kuko.fisch.block.ModBlocks;
 //import net.kuko.fisch.item.ModItems;
+import com.wdiscute.starcatcher.datagen.DataGenerators;
 import net.kuko.fisch.block.ModBlocks;
+import net.kuko.fisch.block.entity.ModBlockEntities;
 import net.kuko.fisch.item.ModItems;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
@@ -19,6 +21,8 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
+import java.util.Collections;
+
 @Mod(Fisch.MOD_ID)
 public class Fisch {
     public static final String MOD_ID = "fisch";
@@ -31,13 +35,19 @@ public class Fisch {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         /*
+        Font: monocraft.ttc
          Generator for Enchanting language:
              Generator for Lorem Ipsum: https://www.lipsum.com/
              Convert it with: https://cryptii.com/pipes/alphabetical-substitution
              Replace "ciphertext alphabet" with ""
+                                                "ABCDEFGHIJ
          Enjoy.
          */
+
+
+
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);

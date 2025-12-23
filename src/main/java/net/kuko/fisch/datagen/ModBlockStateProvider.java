@@ -2,6 +2,7 @@ package net.kuko.fisch.datagen;
 
 
 import net.kuko.fisch.Fisch;
+import net.kuko.fisch.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -20,6 +21,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 //        blockWithItem(ModBlocks.BISMUTH_DEEPSLATE_ORE);
 //
 //        blockWithItem(ModBlocks.MAGIC_BLOCK);
+        blockWithItem(ModBlocks.SMART_SPAWNER);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

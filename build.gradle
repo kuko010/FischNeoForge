@@ -147,6 +147,9 @@ repositories {
 
 dependencies {
     // Actually just runtime
+    implementation "maven.modrinth:starcatcher:2.0.1-NEOFORGE-1.21.1"
+    compileOnly "maven.modrinth:starcatcher:2.0.1-NEOFORGE-1.21.1-sources"
+
     runtimeOnly  "curse.maven:shutup-opengl-1299257:6725177"
     runtimeOnly "org.appliedenergistics:guideme:${guideme_version}"
 
