@@ -13,6 +13,9 @@
   "tooltip.minecraft.examples.5" : "You can make a 'line break' by just leaving the translation empty like this.",
 
   "tooltip.minecraft.examples.7" : "skipping a number will stop the tooltip 'cycle', so don't do that. this text will never be rendered",
-  "tooltip.minecraft.examples.8" : "This works with any item or block, not just your mod or vanilla!"
+  "tooltip.minecraft.examples.8" : "This works with any item or block, not just your mod or vanilla!",
 
+  "config.jade.plugin_fisch.experience_points": "Experience Points",
+  "fisch.smart_spawner.jade.xp" : "Experience: %d",
+  "block.fisch.smart_spawner": "Smart Spawner"
 }
