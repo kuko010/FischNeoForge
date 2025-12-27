@@ -1,7 +1,5 @@
-package net.kuko.fisch.block.compat.jade;
+package net.kuko.fisch.compat.jade;
 
-import net.kuko.fisch.block.custom.SmartSpawner;
-import net.kuko.fisch.block.entity.SmartSpawnerBlockEntity;
 import net.minecraft.resources.ResourceLocation;
 import snownee.jade.api.IWailaClientRegistration;
 import snownee.jade.api.IWailaCommonRegistration;
@@ -15,11 +13,11 @@ public class FischPlugin implements IWailaPlugin {
 
     @Override
     public void register(IWailaCommonRegistration registration) {
-        registration.registerBlockDataProvider(FischComponentProvider.INSTANCE, SmartSpawnerBlockEntity.class);
+//        registration.registerBlockDataProvider(FischComponentProvider.INSTANCE, SmartSpawnerBlockEntity.class);
     }
 
     @Override
     public void registerClient(IWailaClientRegistration registration) {
-        registration.registerBlockComponent(FischComponentProvider.INSTANCE, SmartSpawner.class);
+//        registration.registerBlockComponent(FischComponentProvider.INSTANCE, SmartSpawner.class);
     }
 }

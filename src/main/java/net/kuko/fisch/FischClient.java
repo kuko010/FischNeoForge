@@ -1,7 +1,6 @@
 package net.kuko.fisch;
 
 import net.kuko.fisch.block.entity.ModBlockEntities;
-import net.kuko.fisch.block.renderer.SmartSpawnerRenderer;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -36,6 +35,6 @@ public class FischClient {
     }
     @SubscribeEvent
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerBlockEntityRenderer(ModBlockEntities.SMART_SPAWNER_BE.get(), SmartSpawnerRenderer::new);
+//        event.registerBlockEntityRenderer(ModBlockEntities.SMART_SPAWNER_BE.get(), SmartSpawnerRenderer::new);
     }
 }

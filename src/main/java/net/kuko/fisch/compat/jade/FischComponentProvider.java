@@ -1,7 +1,6 @@
-package net.kuko.fisch.block.compat.jade;
+package net.kuko.fisch.compat.jade;
 
 import net.kuko.fisch.Fisch;
-import net.kuko.fisch.block.entity.SmartSpawnerBlockEntity;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -22,21 +21,7 @@ public enum  FischComponentProvider implements IBlockComponentProvider, IServerD
     @Override
     public void appendTooltip(ITooltip tooltip, BlockAccessor blockAccessor, IPluginConfig iPluginConfig) {
         // First get the block entity from the accessor, THEN check if it's a SmartSpawnerBlockEntity
-        if (blockAccessor.getServerData().contains("fisch.spawner.xp"))
-        {
-            IElementHelper elements = IElementHelper.get();
-            IElement icon = elements.item(new ItemStack(Items.EXPERIENCE_BOTTLE), 0.5f)
-                    .translate(new Vec2(0,-1.5f));
-            tooltip.add(Component.empty());
-
-
-            tooltip.append(icon);
-            tooltip.append(Component.translatable(
-                    Fisch.MOD_ID + ".smart_spawner.jade.xp",
-                    blockAccessor.getServerData().getLong("fisch.spawner.xp")
-            ));
-
-        }
+//        JadeTooltips.INSTANCE.SmartBlockEntity(tooltip, blockAccessor, iPluginConfig);
     }
 
     @Override
@@ -46,9 +31,9 @@ public enum  FischComponentProvider implements IBlockComponentProvider, IServerD
 
     @Override
     public void appendServerData(CompoundTag compoundTag, BlockAccessor blockAccessor) {
-        // Get the block entity from the accessor, then check if it's a SmartSpawnerBlockEntity
-        if (blockAccessor.getBlockEntity() instanceof SmartSpawnerBlockEntity entity) {
-            compoundTag.putLong("fisch.spawner.xp", entity.experiencePoints);
-        }
+//        // Get the block entity from the accessor, then check if it's a SmartSpawnerBlockEntity
+//        if (blockAccessor.getBlockEntity() instanceof SmartSpawnerBlockEntity entity) {
+//            compoundTag.putLong("fisch.spawner.xp", entity.experiencePoints);
+//        }
     }
 }

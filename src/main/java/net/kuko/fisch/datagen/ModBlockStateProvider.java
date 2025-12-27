@@ -21,7 +21,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 //        blockWithItem(ModBlocks.BISMUTH_DEEPSLATE_ORE);
 //
 //        blockWithItem(ModBlocks.MAGIC_BLOCK);
-        blockWithItem(ModBlocks.SMART_SPAWNER);
+//        blockWithItem(ModBlocks.SMART_SPAWNER);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

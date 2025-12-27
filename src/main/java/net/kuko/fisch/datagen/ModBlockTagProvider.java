@@ -26,7 +26,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 //
 //        tag(BlockTags.NEEDS_IRON_TOOL)
 //                .add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
-        tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.SMART_SPAWNER.get());
+//        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+//                .add(ModBlocks.SMART_SPAWNER.get());
     }
 }
