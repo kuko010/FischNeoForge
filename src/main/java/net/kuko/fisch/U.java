@@ -17,7 +17,7 @@ public class U {
     /**
      * merge the given r, g, b and a values into a packed integer
      */
-    public  int ARGBtoInt(int a, int r, int g, int b) {
+    public static int ARGBtoInt(int a, int r, int g, int b) {
         int returnable = (a << 8) + r;
         returnable = (returnable << 8) + g;
         return (returnable << 8) + b;
