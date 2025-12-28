@@ -12,7 +12,7 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, Fisch.MOD_ID);
 
-    /**
+    /**{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:language}{google:prefetchSource}{google:searchClient}{google:sourceId}{google:contextualSearchVersion}ie={inputEncoding}
      *
      * @Depricated
      */
@@ -23,4 +23,8 @@ public class ModBlockEntities {
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }
+
+
+
 }
+

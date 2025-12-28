@@ -1,6 +1,6 @@
 package net.kuko.fisch.datagen;
 
-import net.kuko.fisch.block.ModBlocks;
+import net.kuko.fisch.registries.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;

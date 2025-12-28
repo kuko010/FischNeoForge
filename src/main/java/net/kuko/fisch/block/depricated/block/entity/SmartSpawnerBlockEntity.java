@@ -1,4 +1,4 @@
-//package net.kuko.fisch.depricated.block.entity;
+//package net.kuko.fisch.block.depricated.block.entity;
 //
 //import net.kuko.fisch.Fisch;
 //import net.kuko.fisch.block.entity.ModBlockEntities;

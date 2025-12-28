@@ -1,4 +1,4 @@
-//package net.kuko.fisch.depricated.block.custom;
+//package net.kuko.fisch.block.depricated.block.custom;
 //
 //import com.mojang.serialization.MapCodec;
 //import net.kuko.fisch.block.entity.ModBlockEntities;

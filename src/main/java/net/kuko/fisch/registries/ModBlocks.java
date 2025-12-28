@@ -1,7 +1,6 @@
-package net.kuko.fisch.block;
+package net.kuko.fisch.registries;
 
 import net.kuko.fisch.Fisch;
-import net.kuko.fisch.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -11,8 +10,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-public class ModBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Fisch.MOD_ID);
+public interface ModBlocks {
+    DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Fisch.MOD_ID);
 
     /**
      * @Depricated
@@ -31,7 +30,7 @@ public class ModBlocks {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
-    public static void register(IEventBus eventBus) {
+    static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
 }

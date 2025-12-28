@@ -1,7 +1,7 @@
-//package net.kuko.fisch.block.renderer;
+//package net.kuko.fisch.block.depricated.block.renderer;
 //
 //import com.mojang.blaze3d.vertex.PoseStack;
-////import net.kuko.fisch.depricated.block.entity.SmartSpawnerBlockEntity;
+////import net.kuko.fisch.block.depricated.block.entity.SmartSpawnerBlockEntity;
 //import net.minecraft.client.renderer.LightTexture;
 //import net.minecraft.client.renderer.MultiBufferSource;
 //import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
