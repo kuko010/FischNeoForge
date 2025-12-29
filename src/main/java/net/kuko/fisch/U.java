@@ -5,6 +5,8 @@ import net.minecraft.resources.ResourceLocation;
 import javax.annotation.Nullable;
 import java.lang.reflect.Method;
 
+
+// Shall thou be God Class
 public class U {
     public static ResourceLocation rl(String s) {
         return ResourceLocation.fromNamespaceAndPath(Fisch.MOD_ID, s);
