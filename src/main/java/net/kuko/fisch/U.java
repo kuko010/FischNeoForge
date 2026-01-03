@@ -1,5 +1,7 @@
 package net.kuko.fisch;
 
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 
 import javax.annotation.Nullable;
@@ -8,6 +10,13 @@ import java.lang.reflect.Method;
 
 // Shall thou be God Class
 public class U {
+
+    /**
+     * Creates a ResourceLocation with the mod's namespace and the specified path.
+     *
+     * @param s the path portion of the resource location
+     * @return a ResourceLocation combining the mod ID and the given path
+     */
     public static ResourceLocation rl(String s) {
         return ResourceLocation.fromNamespaceAndPath(Fisch.MOD_ID, s);
     }
@@ -25,6 +34,12 @@ public class U {
         return (returnable << 8) + b;
     }
 
+
+
+
+
+
+
     @Nullable
     public static Method getMethodByName(String className, String methodName) {
         try { // "net.minecraft.resources.ResourceLocation"
@@ -40,4 +55,3 @@ public class U {
         return null;
     }
 }
-
