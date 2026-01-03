@@ -1,0 +1,8 @@
+{
+  "fish": "minecraft:apple",
+  "base_chance": 2,
+  "baits": [
+    "minecraft:sponge"
+  ],
+  "bool": true
+}
