@@ -31,6 +31,7 @@ public class Fisch {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
         ModBlockEntities.register(modEventBus);
         /* Font: monocraft.ttc
          Generator for Enchanting language:
@@ -39,10 +40,6 @@ public class Fisch {
              Replace "ciphertext alphabet" with ""
                                                 "ABCDEFGHIJ
          Enjoy. */
-
-
-
-
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
