@@ -112,27 +112,40 @@ configurations {
 repositories {
     mavenCentral()
 
-    // Add here additional repositories if required by some of the dependencies below.
+    // General mod hosting
+    maven { url = "https://modmaven.dev/" }
+
+    // LDLib / LowDragMC
+    maven { url = "https://maven.firstdark.dev/snapshots" }
+
+
+    // Architectury
+    maven { url = "https://maven.architectury.dev/" }
+
+    // GeckoLib
+    maven { url = "https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/" }
+
+    // Wisp Forest (owo-lib)
+    maven { url = "https://maven.wispforest.io/" }
+
+    // BlameJared (CraftTweaker, Bookshelf, etc.)
     maven {
-        url = "https://maven.favouriteless.net/releases"
+        name = "BlameJared"
+        url = "https://maven.blamejared.com"
     }
 
-    maven {
-        name = 'BlameJared Maven (CrT / Bookshelf)'
-        url = 'https://maven.blamejared.com'
-    }
 
+    // CurseMaven (restricted)
     exclusiveContent {
         forRepository {
-            maven {
-                url "https://cursemaven.com"
-            }
+            maven { url = "https://cursemaven.com" }
         }
         filter {
             includeGroup "curse.maven"
         }
     }
 
+    // Modrinth Maven (restricted)
     exclusiveContent {
         forRepository {
             maven {
@@ -145,27 +158,39 @@ repositories {
         }
     }
 
+    maven {
+        url = "https://maven.sinytra.org/"
+    }
+    maven {
+        url = "https://maven.resourcefulbees.com/repository/terrarium/"
+    }
+
 }
+
 
 dependencies {
-//    implementation 'org.luaj:luaj-jse:3.0.1
-    // Actually just runtime
-    implementation "maven.modrinth:starcatcher:2.0.1-NEOFORGE-1.21.1"
-    compileOnly "maven.modrinth:starcatcher:2.0.1-NEOFORGE-1.21.1-sources"
+    /* Actually just runtime */
+    runtimeOnly "curse.maven:shutup-opengl-1299257:6725177"
+    runtimeOnly "maven.modrinth:fps-reducer:1.21-2.10"
 
-    runtimeOnly  "curse.maven:shutup-opengl-1299257:6725177"
-    runtimeOnly "org.appliedenergistics:guideme:${guideme_version}"
+//    compileOnly "maven.modrinth:starcatcher:2.0.1-NEOFORGE-1.21.1-sources"
+    runtimeOnly "maven.modrinth:starcatcher:2.0.1-NEOFORGE-1.21.1"
 
-    // Implementation and JarJaring
     implementation "maven.modrinth:kap_lib:v${kaplib_version}-mc${minecraft_version}"
-    jarJar(implementation(group: 'com.wdiscute', name: 'libtooltips', version: "1.3")) // 1.3 is the newest, trust
-
     implementation "maven.modrinth:jade:${project.jade_version}+neoforge"
 
-    // Compile only
-    compileOnly "org.appliedenergistics:guideme:${guideme_version}:api"
+//    // If i want to remove  most of the mods, jjust comment this out
+//    implementation "maven.modrinth:connector:2.0.0-beta.8+1.21.1" // I am tired.
+//    implementation "rearth.oritech:oritech-neoforge-${minecraft_version}:${oritech_version}"
 
+    // They NEED to exist.
+    compileOnly "org.appliedenergistics.yoga:yoga:1.0.0"
+    compileOnly "earth.terrarium.athena:athena-neoforge-1.21:4.0.0"
+    compileOnly("com.lowdragmc.ldlib2:ldlib2-neoforge-${minecraft_version}:${ldlib2_version}:all") {
+        transitive = false
+    }
 }
+
 
 
 // This block of code expands all declared replace properties in the specified resource targets.
